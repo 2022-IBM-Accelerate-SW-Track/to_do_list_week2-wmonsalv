@@ -2,6 +2,8 @@ import React from "react";
 import "../component/todos.css";
 import { Card, CardContent, Grid } from "@mui/material";
 import {ListItemButton, ListItemText} from "@mui/material";
+import {Checkbox} from "@mui/material";
+import { blue, red } from "@mui/material/colors";
 
 // 1. This component formats and returns the list of todos.
 // 2. Treat the question mark like an if statement.
@@ -19,7 +21,8 @@ const Todos = ({ todos }) => {
             {/* Remember, we set the local state of this todo item when the user submits the form in 
             AddTodo.js. All we need to do is return the todo list item {todo.content} */}
              <ListItemButton component="a" href="#simple-list">
-                <ListItemText primary={todo.content} secondary={todo.date}/>
+               <Checkbox style={{paddingLeft:0}} primary={true}/>
+                <ListItemText style={{marginTop:10}} primary={todo.content} secondary={todo.date}/>
             </ListItemButton>
           </Card>
         </Grid>
