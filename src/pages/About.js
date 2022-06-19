@@ -3,6 +3,7 @@ import "./About.css";
 import profile_pic from "../assets/profile_pic.jpg";
 
 export default class About extends Component {
+
   render() {
     return (
       <div>
