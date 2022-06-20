@@ -18,12 +18,9 @@ class Home extends Component {
     const todos = this.state.todos.filter((todo) => {
       return todo.id !== id;
     });
-
-
-
     this.setState({
       todos: todos,
-    });  
+    });
 };
 
   // the addTodo function simply creates a new array that includes the user submitted todo item and then
@@ -54,7 +51,7 @@ class Home extends Component {
         {/* When returning the Todos component, todos is a prop passed to the todos.js file
          to format and render the current todo list state */}
          
-        <Todos todos={this.state.todos} deleteTodo={this.deleteTodo}/>
+        <Todos todos={this.state.todos} deleteTodo={this.deleteTodo.bind(this)}/>
       </div>
     );
   }
